@@ -1,0 +1,110 @@
+1.get_the_id()-that get_the_id_takes two parameters but i am yet to fix the second one asi am not sure about the nature of the facebook thing-so all i have to do is that wherever i find the get_the id finction later oi ahev to edit the parameters appropiately
+2.i have set variables like $a=;as i was not sure of the variables available so need to correct that also
+3.the declaration of the status string for the user is something like this 0(abc,cde,fgh,ijk,lmn){anh,bhc,oty,000}
+4.the open_stacks_counter will note < @abc >-(@:draw)(a:storage1)(b:storage2)(c:storage3);--if stack two is empty for eg-< @a00 >
+5.places where i have to decide yet
+	@)draw-how to get the game id
+
+6.card stack is somewhat like that in the allglobals file
+	i imlode it in form of an string separated by ',' and append two zeros at the start of the game
+	first 0 for R
+	second zero for the slot as a '`'
+
+
+7.not yet decided whether to pass and what to pass in the draw from sloyt and the draw form draw function::decide it later
+
+
+8.the flow should be something like 
+   as soon as turn leads to an user
+	set open slots
+		if draw open--draw card on mouseclick
+			--priority tells what type of card is that
+				--if of other suit only discard pile opened by open piles
+				--otherwise appropiate piles opened in caes of appropiate piles opened	on attempt to o-pen the particular pile
+					--the corresspoending pile function is called to store in the pile 				
+					--in case of storing at the draw pile a function called so as to check for completetion
+
+
+9. in the file card_in_slot_inspection i have top get the game hash in order for the open stacks thing to run---later on i might remove this variable pass from the open stacks so that it becomes easier for the other scripts to call it:i have done that all i need to do is to check the open_stack function declaration everywhere
+
+10. moreover i have to add the fourth stack thing i need to edit these files
+
+11.i hve to edit the decide the nature of field key in the cars_in_others_colony_inspection and other inspection files
+		it might be that the other ffile s dont require filed key as well
+		BUT CURRENTLY I HAVE SET THE FIELD KEY AS THE STATUS1 OR STATUS2
+
+		CONSIDER IF THAT NEED fiedkey CHANGING i need to change other things such as the blocak for inverting the field key in the same script
+
+
+12.also i have not copleted the card inspection from discard script which ;ll be required	at the time of trading as it is special,event
+
+13.moreover the draw from draw has to take care of the attack mode
+
+
+14.the status string the place_cardscript must be a status1 or status2
+
+15.the select_stack:
+	decide the exeption that some number other than 1 is passed im the permission 
+	get the id
+	decide th exception that the id fetched using  the get the idd script is not being reflected in the databse query neither in id 1 or id 2;;
+	regex script to extract the colony and script cards out of the status string not in place
+	nor the last card card extraction has been fixed
+
+
+
+
+16.STILL TO DECIDE WHETHJER THE PRIORITY STRING IS SUFFICIENT OR STILL I ANEED TO APPEND A 'a' AT THE BEGINNING
+
+
+17.in the main player 1 the get_the_id function need s to be inspected;;
+the user status string and the the last card and the the slots have not been availed
+ 
+
+
+18. i have added two fields to the tabel allgame s tabel but to get the functionlity of the two fields	 they must be updated by trhe corresspponding scripts which has not bee updated;; i need to add those ::::::::::::::
+
+19.also the draw key has to be set as 0 or 1 or else trthe attack generates an error:also the parameter is called the requiured colony card--but it s actually the
+
+
+
+20 the draw_avail has to be without any startup strings ie its has got to be plain eg::::abc,def,ghi,jkl
+
+21.the attackmacan be used to see future attacks to u asa well as to see furher attacks you may inflict
+
+the parameter list is
+gamehash-rank-idoftheuser to be checked-keynumber-one or zero
+for trackking that of an opponet-might attack -ppassone or zero
+for seeing if u can attack pass 0
+
+
+
+22.the resurrection script will return the type of resurrection fetched against each type of attack ;;
+
+parameter list gamehash--user_id(who will try to defend)--the rank against which resurrection required--the key-numnber of the user who is trying to defend--0  or 1;;
+0 for only top card drawn from the draw and placed into colony of the paseed user;the second card from draw drawn and placed on my pile to attack;;;;the third card decides the REINFORMENT
+
+
+
+>>>>>fb_id in the table_allusers refers to the facebook id;
+	user_id is the id of the _user in the table which is an auto increment primary key
+>>>>> a  function called get_the_rating($the_fb_id)
+	to calculate the rating of the current user which ll be userful in matching;
+*****************************************************************
+*****************************************************************
+*****************************************************************
+
+AFTER THE api integration 
+
+1.in the moderator script 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+a--if((isset($_POST['submit'])) &&( isset($_POST['bet'])) )------leads to proceed.php from the script placyourbet .php
+	also if 1 returned as html (0 or less as te bet)
+		2 returned when bet greater than the current balan			ce
+		3 returned is the amount bet is equal to the current balance;;at this request send an additonla parameter confirmation as the confirmatin from the user post
+
+
+
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
